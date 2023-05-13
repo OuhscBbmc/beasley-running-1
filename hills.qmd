@@ -14,7 +14,7 @@ color_b <- "tomato"
 
 ## Lines
 
-The following red & blue hills are modeled by a line.  "Hill A" is blue and "Hill B" is red  In each scenario, is it more difficult to bike on Hill A or Hill B?
+The following red & blue hills are modeled by a line.  "Hill B" is blue and "Hill R" is red  In each scenario, is it more difficult to bike on Hill B or Hill R?
 
 ```{r}
 #| echo: false
@@ -24,13 +24,13 @@ ggplot(d, aes(x = x, y = y)) +
   geom_abline(slope = .50, intercept = 2, color = color_b) +
   # annotate(
   #   "text", 
-  #   label="A: italic(y) == over(3, 4)*italic(x) + 0", 
+  #   label="B: italic(y) == over(3, 4)*italic(x) + 0", 
   #   x = 2, y = 4.5, 
   #   parse=T, size=5, hjust=0, vjust=1, color=color_a
   # ) +
   # annotate(
   #   "text", 
-  #   label="B: italic(y) == over(1, 2)*italic(x) + 0", 
+  #   label="R: italic(y) == over(1, 2)*italic(x) + 0", 
   #   x = 6, y = 3, 
   #   parse=T, size=5, hjust=0, vjust=1, color=color_b
   # ) +
@@ -52,13 +52,13 @@ ggplot(d, aes(x = x, y = y)) +
   geom_abline(slope = .50, intercept = 0, color = color_b) +
   annotate(
     "text", 
-    label="A: italic(y) == over(3, 4)*italic(x) + 0", 
+    label="B: italic(y) == over(3, 4)*italic(x) + 0", 
     x = 2, y = 4.5, 
     parse=T, size=5, hjust=0, vjust=1, color=color_a
   ) +
   annotate(
     "text", 
-    label="B: italic(y) == over(1, 2)*italic(x) + 0", 
+    label="R: italic(y) == over(1, 2)*italic(x) + 0", 
     x = 6, y = 3, 
     parse=T, size=5, hjust=0, vjust=1, color=color_b
   ) +
@@ -80,13 +80,13 @@ ggplot(d, aes(x = x, y = y)) +
   geom_abline(slope = .50, intercept = 3, color = color_b) +
   annotate(
     "text", 
-    label="A: italic(y) == over(1, 2)*italic(x) + 2", 
+    label="B: italic(y) == over(1, 2)*italic(x) + 2", 
     x = 5, y = 4.5, 
     parse=T, size=5, hjust=0, vjust=1, color=color_a
   ) +
   annotate(
     "text", 
-    label="B: italic(y) == over(1, 2)*italic(x) + 3", 
+    label="R: italic(y) == over(1, 2)*italic(x) + 3", 
     x = 2, y = 7, 
     parse=T, size=5, hjust=0, vjust=1, color=color_b
   ) +
@@ -108,13 +108,13 @@ ggplot(d, aes(x = x, y = y)) +
   # geom_abline(slope = .50, intercept = 3, color = color_b) +
   annotate(
     "text", 
-    label="A: italic(y) == over(3, 4)*italic(x) + 0", 
+    label="B: italic(y) == over(3, 4)*italic(x) + 0", 
     x = 2, y = 4.5, 
     parse=T, size=5, hjust=0, vjust=1, color=color_a
   ) +
   annotate(
     "text", 
-    label="B: italic(y) == over(1, 2)*italic(x) + 0", 
+    label="R: italic(y) == over(1, 2)*italic(x) + 0", 
     x = 6, y = 3, 
     parse=T, size=5, hjust=0, vjust=1, color=color_b
   ) +
@@ -135,13 +135,13 @@ ggplot(d, aes(x = x, y = y)) +
   # geom_abline(slope = .50, intercept = 3, color = color_b) +
   annotate(
     "text", 
-    label="A: italic(y) == over(2, 1)*italic(x) + 0", 
+    label="B: italic(y) == over(2, 1)*italic(x) + 0", 
     x = 2, y = 4.5, 
     parse=T, size=5, hjust=0, vjust=1, color=color_a
   ) +
   annotate(
     "text", 
-    label="B: italic(y) == over(3, 1)*italic(x) + 0", 
+    label="R: italic(y) == over(3, 1)*italic(x) + 0", 
     x = 6, y = 3, 
     parse=T, size=5, hjust=0, vjust=1, color=color_b
   ) +
