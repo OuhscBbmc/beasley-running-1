@@ -1,0 +1,73 @@
+---
+title: "hills"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: false
+library(ggplot2)
+d       <- tibble::tibble(x = 1:10, y = (1:10)/10)
+color_a <- "royalblue"
+color_b <- "tomato"
+```
+
+## Lines
+
+The following red & blue hills are modeled by a line.  "Hill A" is blue and "Hill B" is red  In each scenario, is it more difficult to bike on Hill A or Hill B?
+
+```{r}
+#| echo: false
+ggplot(d, aes(x = x, y = y)) +
+  geom_line(color = "transparent") +
+  geom_abline(slope = -.25, intercept = 5, color = color_a) +
+  geom_abline(slope = .50, intercept = 2, color = color_b) +
+  # annotate(
+  #   "text", 
+  #   label="A: italic(y) == over(3, 4)*italic(x) + 0", 
+  #   x = 2, y = 4.5, 
+  #   parse=T, size=5, hjust=0, vjust=1, color=color_a
+  # ) +
+  # annotate(
+  #   "text", 
+  #   label="B: italic(y) == over(1, 2)*italic(x) + 0", 
+  #   x = 6, y = 3, 
+  #   parse=T, size=5, hjust=0, vjust=1, color=color_b
+  # ) +
+  scale_x_continuous(expand = expansion(add = 0)) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 8)) +
+  theme_minimal() +
+  labs(
+    title    = "Scenario 1", 
+    subtitle = "Lines", 
+    y        = "y"
+  )
+```
+
+```{r}
+#| echo: false
+ggplot(d, aes(x = x, y = y)) +
+  # geom_line() +
+  geom_abline(slope = .75, intercept = 0, color = color_a) +
+  geom_abline(slope = .50, intercept = 0, color = color_b) +
+  annotate(
+    "text", 
+    label="A: italic(y) == over(3, 4)*italic(x) + 0", 
+    x = 2, y = 4.5, 
+    parse=T, size=5, hjust=0, vjust=1, color=color_a
+  ) +
+  annotate(
+    "text", 
+    label="B: italic(y) == over(1, 2)*italic(x) + 0", 
+    x = 6, y = 3, 
+    parse=T, size=5, hjust=0, vjust=1, color=color_b
+  ) +
+  scale_x_continuous(expand = expansion(add = 0)) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 8)) +
+  theme_minimal() +
+  labs(
+    title    = "Scenario 2", 
+    subtitle = "Lines", 
+    y        = "y"
+  )
+```
